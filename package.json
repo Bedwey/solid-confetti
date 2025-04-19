@@ -1,0 +1,52 @@
+{
+  "name": "solid-confetti",
+  "version": "0.0.1",
+  "description": "Confetti animations for SolidJS applications",
+  "author": "Abdullah Bedwey",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bedwey/solid-confetti.git"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c rollup.config.js"
+  },
+  "keywords": [
+    "solid",
+    "solidjs",
+    "confetti",
+    "animation",
+    "ui",
+    "effect"
+  ],
+  "peerDependencies": {
+    "solid-js": "^1.8.16"
+  },
+  "devDependencies": {
+    "rollup": "^4.40.0",
+    "rollup-plugin-copy": "^3.5.0",
+    "rollup-plugin-import-css": "^3.5.8",
+    "rollup-preset-solid": "^3.0.0",
+    "solid-js": "1.9.5",
+    "typescript": "^5.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "main": "dist/index/index.common.js",
+  "module": "dist/index/index.module.js",
+  "types": "dist/index/index.d.ts",
+  "exports": {
+    ".": {
+      "solid": "./dist/index/index.jsx",
+      "import": "./dist/index/index.module.js",
+      "browser": "./dist/index/index.module.js",
+      "require": "./dist/index/index.common.js",
+      "node": "./dist/index/index.common.js",
+      "types": "./dist/index/index.d.ts"
+    },
+    "./styles.css": "./dist/index/styles/styles.css"
+  }
+}
